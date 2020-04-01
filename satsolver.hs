@@ -3,6 +3,7 @@ import Data.Maybe (mapMaybe, fromJust)
 import Data.Function (on)
 import Data.Set (toList, fromList, intersection, difference)
 import System.IO
+import System.Environment
 
 -- TASK 1
 data Expression a = T
@@ -137,9 +138,10 @@ solutionToString exp =
                              else "-" ++ tail x ++ " ") exp
   in
   list
-  
 
-mysolver input output = do
+
+main = do
+  [input, output] <- getArgs
   inputFile <- readFile input
   let list = dropWhile (\x -> take 1 x == "c") (lines inputFile)
   let kno = And (map stringToExp (tail list))
