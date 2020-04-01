@@ -5,6 +5,6 @@ Running the program:
 * runhaskell satsolver.hs "input_file.txt" "solution.txt"
 
 # Team:
-Sandra Kerševan\n
-Sara Močnik\n
+Sandra Kerševan  
+Sara Močnik  
 Ana Štern
